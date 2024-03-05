@@ -2,7 +2,7 @@ function encriptar() {
   let texto = document.getElementById("texto").value;
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
-  let muñeco = document.getElementById("muñeco");
+  let doll = document.getElementById("doll");
 
   let textoCifrado = texto
     .replace(/e/gi, "enter")
@@ -15,9 +15,9 @@ function encriptar() {
     document.getElementById("texto").value = textoCifrado;
     tituloMensaje.textContent = "Texto encriptado con éxito";
     parrafo.textContent = "";
-    muñeco.src = "./img/encriptado.png";
+    doll.src = "./img/encriptado.png";
   } else {
-    muñeco.src = "./img/muñeco.png";
+    doll.src = "./img/doll.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent =
       "Ingresa el texto que deseas encriptar o desencriptar";
@@ -29,7 +29,7 @@ function desencriptar() {
   let texto = document.getElementById("texto").value;
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
-  let muñeco = document.getElementById("muñeco");
+  let muñeco = document.getElementById("doll");
 
   let textoCifrado = texto
     .replace(/enter/gi, "e")
@@ -42,9 +42,9 @@ function desencriptar() {
     document.getElementById("texto").value = textoCifrado;
     tituloMensaje.textContent = "Texto desencriptado con éxito";
     parrafo.textContent = "";
-    muñeco.src = "./img/desencriptado.png";
+    doll.src = "./img/desencriptado.png";
   } else {
-    muñeco.src = "./img/muñeco.png";
+    muñeco.src = "./img/doll.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent =
       "Ingresa el texto que deseas encriptar o desencriptar";
